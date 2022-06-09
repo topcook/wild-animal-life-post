@@ -85,7 +85,7 @@ function App() {
               posts.map((post, index) => {
                 return (
                   <div key={index}>
-                    <a href='https://reactjs.org' target={'_blank'}>
+                    <a href='https://wild-animal-life-post-card.vercel.app/' target={'_blank'}>
                       <img src={post.image} className='picture picture-1' />
                     </a>
                     <div className='description'>
