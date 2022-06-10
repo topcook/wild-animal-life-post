@@ -5,6 +5,7 @@ import picture4 from './assets/4.jpg';
 import picture5 from './assets/5.jpg';
 import picture6 from './assets/6.jpg';
 import picture7 from './assets/7.jpg';
+import { Row, Col } from 'react-bootstrap';
 
 import './App.css';
 
@@ -65,7 +66,9 @@ function App() {
         <div className='container' >
           <ul>
             <li>
-              Home
+              <a href='https://wild-animal-life-post.netlify.app/' target={'_blank'}>
+                Home
+              </a>
             </li>
             <li>
               News
@@ -81,20 +84,23 @@ function App() {
             Abused Piglet Thrown Down At Animal Shelter Has Supernatural Transformation
           </h1>
           <div>
-            {
-              posts.map((post, index) => {
-                return (
-                  <div key={index}>
-                    <a href={`https://wild-animal-life-post-card.vercel.app/post/${(index + 1)}`} target={'_blank'}>
-                      <img src={post.image} className='picture picture-1' />
-                    </a>
-                    <div className='description'>
-                      {post.content}
-                    </div>
-                  </div>
-                );
-              })
-            }
+            <Row>
+              {
+                posts.map((post, index) => {
+                  return (
+                    <Col xs={12} sm={6} md={4} key={index}>
+                      <a href='#'>
+                        <img src={post.image} className='picture picture-1' />
+                      </a>
+                      <div className='description'>
+                        {post.content}
+                      </div>
+                    </Col>
+                  );
+                })
+              }
+            </Row>
+
           </div>
         </div>
       </header>
