@@ -66,7 +66,7 @@ function App() {
         <div className='container' >
           <ul>
             <li>
-              <a href='https://wild-animal-life-post.netlify.app/' target={'_blank'}>
+              <a href='https://wild-animal-life-post-card.netlify.app/' target={'_blank'}>
                 Home
               </a>
             </li>
